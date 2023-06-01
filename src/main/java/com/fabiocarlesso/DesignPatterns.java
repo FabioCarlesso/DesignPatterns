@@ -1,9 +1,14 @@
 package com.fabiocarlesso;
 
+import com.fabiocarlesso.middleware.Middleware;
+import com.fabiocarlesso.middleware.RoleCheckMiddleware;
+import com.fabiocarlesso.middleware.ThrottlingMiddleware;
+import com.fabiocarlesso.middleware.UserExistsMiddleware;
 import com.fabiocarlesso.order.Order;
 import com.fabiocarlesso.strategies.PayByCreditCard;
 import com.fabiocarlesso.strategies.PayByPayPal;
 import com.fabiocarlesso.strategies.PayStrategy;
+import com.fabiocarlesso.server.Server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +18,37 @@ import java.util.Map;
 
 public class DesignPatterns {
     public static void main(String[] args) throws IOException {
-        strategyMain();
+        //strategyMain();
+        chainOfResponsabilityMain();
+    }
+
+    private static void chainOfResponsabilityMain() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Server server;
+
+        server = new Server();
+        server.register("admin@example.com", "admin_pass");
+        server.register("user@example.com", "user_pass");
+
+        // All checks are linked. Client can build various chains using the same
+        // components.
+        Middleware middleware = Middleware.link(
+                new ThrottlingMiddleware(2),
+                new UserExistsMiddleware(server),
+                new RoleCheckMiddleware()
+        );
+
+        // Server gets a chain from client code.
+        server.setMiddleware(middleware);
+
+        boolean success;
+        do {
+            System.out.print("Enter email: ");
+            String email = reader.readLine();
+            System.out.print("Input password: ");
+            String password = reader.readLine();
+            success = server.logIn(email, password);
+        } while (!success);
     }
 
     private static void strategyMain() throws IOException {

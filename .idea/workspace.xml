@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149c1c8f-6535-4fba-9a8a-092fc860fa8b" name="Changes" comment="feat: Create 2 strategies to pay (Paypal and CreditCard)">
+    <list default="true" id="149c1c8f-6535-4fba-9a8a-092fc860fa8b" name="Changes" comment="fix: Change Main and remove some code smells">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/middleware/Middleware.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/middleware/RoleCheckMiddleware.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/middleware/ThrottlingMiddleware.java" afterDir="false" />
@@ -12,7 +12,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/DesignPatterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/DesignPatterns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fabiocarlesso/order/Order.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685563013157</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix: Change Main and remove some code smells">
+      <created>1685642733111</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685642733111</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -162,6 +168,7 @@
     <MESSAGE value="feat: Add lombok" />
     <MESSAGE value="feat: Create Pay Strategy Interface" />
     <MESSAGE value="feat: Create 2 strategies to pay (Paypal and CreditCard)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Create 2 strategies to pay (Paypal and CreditCard)" />
+    <MESSAGE value="fix: Change Main and remove some code smells" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Change Main and remove some code smells" />
   </component>
 </project>
