@@ -2,7 +2,6 @@ package com.fabiocarlesso.order;
 
 import com.fabiocarlesso.strategies.PayStrategy;
 import lombok.Getter;
-import lombok.Setter;
 
 public class Order {
     @Getter

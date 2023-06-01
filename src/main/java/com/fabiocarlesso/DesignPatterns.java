@@ -12,19 +12,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DesignPatterns {
-    private static Map<Integer, Integer> priceOnProducts = new HashMap<>();
-    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-    private static Order order = new Order();
-    private static PayStrategy strategy;
+    public static void main(String[] args) throws IOException {
+        strategyMain();
+    }
 
-    static {
+    private static void strategyMain() throws IOException {
+        Map<Integer, Integer> priceOnProducts = new HashMap<>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Order order = new Order();
+        PayStrategy strategy = null;
+
         priceOnProducts.put(1, 2200);
         priceOnProducts.put(2, 1850);
         priceOnProducts.put(3, 1100);
         priceOnProducts.put(4, 890);
-    }
 
-    public static void main(String[] args) throws IOException {
         while (!order.isClosed()) {
             int cost;
 
