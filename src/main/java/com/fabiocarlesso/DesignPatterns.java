@@ -7,6 +7,7 @@ import com.fabiocarlesso.chainofresponsibility.middleware.RoleCheckMiddleware;
 import com.fabiocarlesso.chainofresponsibility.middleware.ThrottlingMiddleware;
 import com.fabiocarlesso.chainofresponsibility.middleware.UserExistsMiddleware;
 import com.fabiocarlesso.chainofresponsibility.order.Order;
+import com.fabiocarlesso.state.Package;
 import com.fabiocarlesso.strategy.PayByCreditCard;
 import com.fabiocarlesso.strategy.PayByPayPal;
 import com.fabiocarlesso.strategy.PayStrategy;
@@ -22,7 +23,22 @@ public class DesignPatterns {
     public static void main(String[] args) throws IOException {
         //strategyMain();
         //chainOfResponsabilityMain();
-        commandMain();
+        //commandMain();
+        stateMain();
+    }
+
+    private static void stateMain() {
+        Package pkg = new Package();
+        pkg.printStatus();
+
+        pkg.nextState();
+        pkg.printStatus();
+
+        pkg.nextState();
+        pkg.printStatus();
+
+        pkg.nextState();
+        pkg.printStatus();
     }
 
     private static void commandMain() {
