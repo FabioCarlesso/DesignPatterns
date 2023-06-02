@@ -1,6 +1,6 @@
-package com.fabiocarlesso.server;
+package com.fabiocarlesso.chainofresponsibility.server;
 
-import com.fabiocarlesso.middleware.Middleware;
+import com.fabiocarlesso.chainofresponsibility.middleware.Middleware;
 
 import java.util.HashMap;
 import java.util.Map;

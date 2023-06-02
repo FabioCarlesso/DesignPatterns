@@ -1,14 +1,16 @@
 package com.fabiocarlesso;
 
-import com.fabiocarlesso.middleware.Middleware;
-import com.fabiocarlesso.middleware.RoleCheckMiddleware;
-import com.fabiocarlesso.middleware.ThrottlingMiddleware;
-import com.fabiocarlesso.middleware.UserExistsMiddleware;
-import com.fabiocarlesso.order.Order;
-import com.fabiocarlesso.strategies.PayByCreditCard;
-import com.fabiocarlesso.strategies.PayByPayPal;
-import com.fabiocarlesso.strategies.PayStrategy;
-import com.fabiocarlesso.server.Server;
+import com.fabiocarlesso.command.invoker.TextFileOperationExecutor;
+import com.fabiocarlesso.command.receiver.TextFile;
+import com.fabiocarlesso.chainofresponsibility.middleware.Middleware;
+import com.fabiocarlesso.chainofresponsibility.middleware.RoleCheckMiddleware;
+import com.fabiocarlesso.chainofresponsibility.middleware.ThrottlingMiddleware;
+import com.fabiocarlesso.chainofresponsibility.middleware.UserExistsMiddleware;
+import com.fabiocarlesso.chainofresponsibility.order.Order;
+import com.fabiocarlesso.strategy.PayByCreditCard;
+import com.fabiocarlesso.strategy.PayByPayPal;
+import com.fabiocarlesso.strategy.PayStrategy;
+import com.fabiocarlesso.chainofresponsibility.server.Server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,7 +21,17 @@ import java.util.Map;
 public class DesignPatterns {
     public static void main(String[] args) throws IOException {
         //strategyMain();
-        chainOfResponsabilityMain();
+        //chainOfResponsabilityMain();
+        commandMain();
+    }
+
+    private static void commandMain() {
+        TextFileOperationExecutor textFileOperationExecutor = new TextFileOperationExecutor();
+        TextFile textFile = new TextFile("file1.txt");
+        System.out.println(textFileOperationExecutor.executeOperation(textFile::open));
+        System.out.println(textFileOperationExecutor.executeOperation(textFile::save));
+        System.out.println(textFileOperationExecutor.executeOperation(textFile::copy));
+        System.out.println(textFileOperationExecutor.executeOperation(textFile::paste));
     }
 
     private static void chainOfResponsabilityMain() throws IOException {

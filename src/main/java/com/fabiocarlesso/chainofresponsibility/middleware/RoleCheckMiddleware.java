@@ -1,4 +1,4 @@
-package com.fabiocarlesso.middleware;
+package com.fabiocarlesso.chainofresponsibility.middleware;
 
 public class RoleCheckMiddleware extends Middleware {
     public boolean check(String email, String password) {

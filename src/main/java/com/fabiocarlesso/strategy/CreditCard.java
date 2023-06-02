@@ -1,4 +1,4 @@
-package com.fabiocarlesso.strategies;
+package com.fabiocarlesso.strategy;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

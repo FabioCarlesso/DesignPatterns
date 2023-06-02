@@ -1,6 +1,6 @@
-package com.fabiocarlesso.order;
+package com.fabiocarlesso.chainofresponsibility.order;
 
-import com.fabiocarlesso.strategies.PayStrategy;
+import com.fabiocarlesso.strategy.PayStrategy;
 import lombok.Getter;
 
 public class Order {

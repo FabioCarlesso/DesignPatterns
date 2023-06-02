@@ -1,4 +1,4 @@
-package com.fabiocarlesso.middleware;
+package com.fabiocarlesso.chainofresponsibility.middleware;
 
 public abstract class Middleware {
     private Middleware next;

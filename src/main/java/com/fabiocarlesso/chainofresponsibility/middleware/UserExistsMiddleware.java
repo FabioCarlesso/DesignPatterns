@@ -1,6 +1,6 @@
-package com.fabiocarlesso.middleware;
+package com.fabiocarlesso.chainofresponsibility.middleware;
 
-import com.fabiocarlesso.server.Server;
+import com.fabiocarlesso.chainofresponsibility.server.Server;
 
 public class UserExistsMiddleware extends Middleware {
     private Server server;
