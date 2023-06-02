@@ -28,11 +28,11 @@ public class StrategyMain {
 
             String continueChoice;
             do {
-                System.out.print("Please, select a product:" + "\n" +
-                        "1 - Mother board" + "\n" +
-                        "2 - CPU" + "\n" +
-                        "3 - HDD" + "\n" +
-                        "4 - Memory" + "\n");
+                System.out.println("Please, select a product:");
+                System.out.println("1 - Mother board");
+                System.out.println("2 - CPU");
+                System.out.println("3 - HDD");
+                System.out.println("4 - Memory");
                 int choice = Integer.parseInt(reader.readLine());
                 cost = priceOnProducts.get(choice);
                 System.out.print("Count: ");
@@ -43,9 +43,9 @@ public class StrategyMain {
             } while (continueChoice.equalsIgnoreCase("Y"));
 
             if (strategy == null) {
-                System.out.println("Please, select a payment method:" + "\n" +
-                        "1 - PalPay" + "\n" +
-                        "2 - Credit Card");
+                System.out.println("Please, select a payment method:");
+                System.out.println("1 - PalPay");
+                System.out.println("2 - Credit Card");
                 String paymentMethod = reader.readLine();
 
                 // Client creates different strategies based on input from user,
