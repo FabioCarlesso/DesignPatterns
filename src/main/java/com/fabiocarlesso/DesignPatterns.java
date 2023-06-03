@@ -1,9 +1,6 @@
 package com.fabiocarlesso;
 
-import com.fabiocarlesso.mainexecution.ChainOfResponsabilityMain;
-import com.fabiocarlesso.mainexecution.CommandMain;
-import com.fabiocarlesso.mainexecution.StateMain;
-import com.fabiocarlesso.mainexecution.StrategyMain;
+import com.fabiocarlesso.mainexecution.*;
 
 import java.io.IOException;
 
@@ -12,7 +9,8 @@ public class DesignPatterns {
         //StrategyMain.strategyMain();
         //ChainOfResponsabilityMain.chainOfResponsabilityMain();
         //CommandMain.commandMain();
-        StateMain.stateMain();
+        //StateMain.stateMain();
+        ObserverMain.observerMain();
     }
 
 }
