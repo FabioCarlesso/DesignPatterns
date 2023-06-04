@@ -10,7 +10,8 @@ public class DesignPatterns {
         //ChainOfResponsabilityMain.chainOfResponsabilityMain();
         //CommandMain.commandMain();
         //StateMain.stateMain();
-        ObserverMain.observerMain();
+        //ObserverMain.observerMain();
+        VisitorMain.visitorMain();
     }
 
 }
