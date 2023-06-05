@@ -35,3 +35,9 @@ From: https://refactoring.guru/design-patterns/strategy/java/example
 Exporting shapes into XML export a set of geometric shapes into XML. The catch is that we don’t want to change the code 
 of shapes directly or at least keep it to the minimum.
 From: https://refactoring.guru/design-patterns/visitor/java/example
+
+## Template Method
+
+emplate Method pattern defines an algorithm of working with a social network. Subclasses that match a particular social 
+network, implement these steps according to the API provided by the social network.
+From: https://refactoring.guru/design-patterns/template-method/java/example
