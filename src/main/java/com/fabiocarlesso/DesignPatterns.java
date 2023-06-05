@@ -11,7 +11,8 @@ public class DesignPatterns {
         //CommandMain.commandMain();
         //StateMain.stateMain();
         //ObserverMain.observerMain();
-        VisitorMain.visitorMain();
+        //VisitorMain.visitorMain();
+        TemplateMethodMain.templateMethodMain();
     }
 
 }
