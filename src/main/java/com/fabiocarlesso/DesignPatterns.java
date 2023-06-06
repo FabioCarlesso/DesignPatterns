@@ -12,7 +12,8 @@ public class DesignPatterns {
         //StateMain.stateMain();
         //ObserverMain.observerMain();
         //VisitorMain.visitorMain();
-        TemplateMethodMain.templateMethodMain();
+        //TemplateMethodMain.templateMethodMain();
+        MediatorMain.mediatorMain();
     }
 
 }
