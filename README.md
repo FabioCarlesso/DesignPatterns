@@ -38,6 +38,13 @@ From: https://refactoring.guru/design-patterns/visitor/java/example
 
 ## Template Method
 
-emplate Method pattern defines an algorithm of working with a social network. Subclasses that match a particular social 
+Template Method pattern defines an algorithm of working with a social network. Subclasses that match a particular social 
 network, implement these steps according to the API provided by the social network.
 From: https://refactoring.guru/design-patterns/template-method/java/example
+
+## Mediator
+
+Imagine we're building a simple cooling system that consists of a fan, a power supply, and a button. Pressing the button
+will either turn on or turn off the fan. Before we turn the fan on, we need to turn on the power. Similarly, we have to 
+turn off the power right after the fan is turned off.
+From: https://www.baeldung.com/java-mediator-pattern
