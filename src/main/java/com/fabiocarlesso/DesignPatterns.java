@@ -13,7 +13,8 @@ public class DesignPatterns {
         //ObserverMain.observerMain();
         //VisitorMain.visitorMain();
         //TemplateMethodMain.templateMethodMain();
-        MediatorMain.mediatorMain();
+        //MediatorMain.mediatorMain();
+        InterpreterMain.interpreterMain();
     }
 
 }
