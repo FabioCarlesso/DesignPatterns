@@ -48,3 +48,7 @@ Imagine we're building a simple cooling system that consists of a fan, a power s
 will either turn on or turn off the fan. Before we turn the fan on, we need to turn on the power. Similarly, we have to 
 turn off the power right after the fan is turned off.
 From: https://www.baeldung.com/java-mediator-pattern
+
+## Interpreter
+Create a simple SQL-like syntax in an object-oriented way, which will be then interpreted and return us the result.
+From: https://www.baeldung.com/java-interpreter-pattern
